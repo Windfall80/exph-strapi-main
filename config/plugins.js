@@ -1,20 +1,15 @@
 module.exports = ({ env }) => ({
-    email: {
-      provider: 'smtp',
-      providerOptions: {
-        host: 'email-smtp.us-east-2.amazonaws.com', //SMTP Host
-        port: 465, //SMTP Port
-        secure: true,
-        username: 'AKIARRIYIUCP5QLMHS7Z',
-        password: 'BBaPwSVbopJxpSPn73AY9x+2EDzyBp8ap1LdXtsPPM4U',
-        rejectUnauthorized: true,
-        requireTLS: false,
-        connectionTimeout: 1,
+  upload: {
+      config: {
+          provider: 'aws-s3',
+          providerOptions: {
+              accessKeyId: env('AKIATWKQUYYM7CX34IOR'),
+              secretAccessKey: env('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'),
+              region: env('us-east-1'),
+              params: {
+                  Bucket: env('estrapi-expohotel-images'),
+              },
+          },
       },
-      settings: {
-        from: '"Soporte Exphotel" <no-reply@exphotelhive.com>',
-        defaultFrom: 'no-reply@exphotelhive.com',
-        defaultReplyTo: 'no-reply@exphotelhive.com'
-      },
-    },
-  });
+  }
+});
