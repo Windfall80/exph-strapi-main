@@ -2,14 +2,14 @@ module.exports = ({ env }) => ({
   defaultConnection: 'default',
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: 'mysql',
       settings: {
         client: 'mysql',
-        host: env('DATABASE_HOST', 'localhost'),
+        host: env('DATABASE_HOST', '127.0.0.1'),
         port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'exph_strapi'),
-        username: env('DATABASE_USERNAME', 'root'),
-        password: env('DATABASE_PASSWORD', 'admin'),
+        database: env('DATABASE_NAME', 'strapi-database-main'),
+        username: env('DATABASE_USERNAME', 'postgrest'),
+        password: env('DATABASE_PASSWORD', '-Marcosprime-'),
         ssl: env.bool('DATABASE_SSL', false),
       },
       options: {}
