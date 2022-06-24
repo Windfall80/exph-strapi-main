@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "name": "Servicios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "open": {
+      "type": "boolean",
+      "default": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "supplier": {
+      "via": "services",
+      "model": "supplier"
+    },
+    "quotations": {
+      "private": true,
+      "via": "service",
+      "collection": "quotation"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "main_category": {
+      "model": "category"
+    },
+    "categories": {
+      "collection": "category"
+    },
+    "favs": {
+      "private": true,
+      "via": "fav_services",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "rating": {
+      "type": "decimal",
+      "default": 0
+    },
+    "rating_count": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

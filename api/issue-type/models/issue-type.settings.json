@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issue_types",
+  "info": {
+    "name": "Incidencia Tipos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

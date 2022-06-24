@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Categorias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "depth": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "position": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "parent": {
+      "via": "childrens",
+      "model": "category"
+    },
+    "childrens": {
+      "via": "parent",
+      "collection": "category"
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "Alimentos",
+        "Bebidas"
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "name": "Planes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "users": {
+      "type": "integer"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "stripe_product_ID": {
+      "type": "string",
+      "required": false,
+      "unique": false
+    },
+    "free_tickets": {
+      "type": "integer",
+      "default": 10
+    },
+    "grace_period": {
+      "type": "integer",
+      "default": 0
+    },
+    "perks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "plans.perk"
+    },
+    "prices": {
+      "via": "plan",
+      "collection": "plan-price"
+    },
+    "static_period_end": {
+      "type": "datetime"
+    }
+  }
+}

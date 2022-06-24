@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_terms",
+  "info": {
+    "name": "Pago Plazos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

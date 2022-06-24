@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotations",
+  "info": {
+    "name": "Cotizaciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "qty": {
+      "type": "decimal"
+    },
+    "details": {
+      "type": "text"
+    },
+    "open": {
+      "type": "boolean",
+      "default": true
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "group": {
+      "via": "quotations",
+      "model": "quotation-group"
+    },
+    "user": {
+      "via": "quotations",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "company": {
+      "via": "quotations",
+      "model": "company"
+    },
+    "supplier": {
+      "via": "quotations",
+      "model": "supplier"
+    },
+    "service": {
+      "via": "quotations",
+      "model": "service"
+    },
+    "status": {
+      "model": "quotation-status"
+    },
+    "offer": {
+      "via": "quotation",
+      "model": "quotation-offer"
+    },
+    "rating": {
+      "via": "quotation",
+      "model": "rating"
+    },
+    "discarded_at": {
+      "type": "datetime"
+    },
+    "discard_motives": {
+      "collection": "discard-motives"
+    },
+    "discard_details": {
+      "type": "text"
+    },
+    "chat_room": {
+      "via": "quotation",
+      "model": "chat-room"
+    }
+  }
+}

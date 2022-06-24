@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offer_tickets",
+  "info": {
+    "name": "Oferta Ticket",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "spent": {
+      "type": "boolean",
+      "default": false
+    },
+    "spent_by": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "spent_at": {
+      "type": "datetime"
+    },
+    "expires_at": {
+      "type": "datetime"
+    },
+    "spent_for": {
+      "model": "offer"
+    },
+    "supplier": {
+      "private": true,
+      "model": "supplier"
+    },
+    "free": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

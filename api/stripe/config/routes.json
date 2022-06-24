@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/stripe/fix",
+      "handler": "stripe.fix",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/stripe/endpoint",
+      "handler": "stripe.endpoint",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

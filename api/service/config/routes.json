@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/services",
+      "handler": "service.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/services/count",
+      "handler": "service.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/services/:id",
+      "handler": "service.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/services",
+      "handler": "service.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/services",
+      "handler": "service.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/services/add-fav/:id",
+      "handler": "service.addFav",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/services/remove-fav/:id",
+      "handler": "service.removeFav",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/services/:id",
+      "handler": "service.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/services/:id",
+      "handler": "service.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}

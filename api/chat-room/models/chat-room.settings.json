@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chat_room",
+  "info": {
+    "name": "Chat Room",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room": {
+      "type": "uid",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "quotation",
+        "offer_request",
+        "issue"
+      ],
+      "required": true
+    },
+    "quotation": {
+      "model": "quotation",
+      "via": "chat_room"
+    },
+    "offer_request": {
+      "model": "offer-request",
+      "via": "chat_room"
+    },
+    "issue": {
+      "model": "issue",
+      "via": "chat_room"
+    },
+    "unread_a": {
+      "type": "integer",
+      "default": 0
+    },
+    "unread_b": {
+      "type": "integer"
+    }
+  }
+}

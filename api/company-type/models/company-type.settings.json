@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_types",
+  "info": {
+    "name": "Empresa Tipos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

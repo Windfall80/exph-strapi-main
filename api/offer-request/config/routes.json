@@ -1,0 +1,92 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/offer-requests",
+      "handler": "offer-request.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/offer-requests/count",
+      "handler": "offer-request.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/offer-requests/:id",
+      "handler": "offer-request.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/offer-requests",
+      "handler": "offer-request.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offer-requests/:id",
+      "handler": "offer-request.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/offer-requests/:id",
+      "handler": "offer-request.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/offer-requests/share/:id",
+      "handler": "offer-request.share",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offer-requests/accept/:id",
+      "handler": "offer-request.accept",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offer-requests/discard/:id",
+      "handler": "offer-request.discard",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offer-requests/set-delivery/:id",
+      "handler": "offer-request.setDelivery",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offer-requests/set-rating/:id",
+      "handler": "offer-request.setRating",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}

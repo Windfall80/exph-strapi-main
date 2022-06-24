@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locks",
+  "info": {
+    "name": "Lock",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Task": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

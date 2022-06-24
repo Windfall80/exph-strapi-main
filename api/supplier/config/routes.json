@@ -1,0 +1,152 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/suppliers/subscription_date",
+      "handler": "supplier.subscription_date",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers",
+      "handler": "supplier.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/count",
+      "handler": "supplier.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/profile",
+      "handler": "supplier.profile",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/cards",
+      "handler": "supplier.getCards",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/avalible-points",
+      "handler": "supplier.avaliblePoints",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/buy-points",
+      "handler": "supplier.buyPoints",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/export-quotations-report",
+      "handler": "supplier.exportQuotationsReport",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/suppliers/:id",
+      "handler": "supplier.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+
+
+    {
+      "method": "POST",
+      "path": "/suppliers",
+      "handler": "supplier.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/suppliers/update-subscription",
+      "handler": "supplier.updateSubscription",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/suppliers/cancel-subscription",
+      "handler": "supplier.cancelSubscription",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/suppliers/addCard",
+      "handler": "supplier.addCard",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/suppliers/add-fav/:id",
+      "handler": "supplier.addFav",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/suppliers/remove-fav/:id",
+      "handler": "supplier.removeFav",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/suppliers/:id",
+      "handler": "supplier.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+
+    {
+      "method": "DELETE",
+      "path": "/suppliers/remove-paymentmethod/:id",
+      "handler": "supplier.removePaymentMethod",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/suppliers/:id",
+      "handler": "supplier.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+
+  ]
+}

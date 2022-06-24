@@ -1,0 +1,21 @@
+{
+  "collectionName": "plans_perk",
+  "info": {
+    "name": "perk",
+    "icon": "list-alt"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "company",
+        "supplier"
+      ]
+    }
+  }
+}

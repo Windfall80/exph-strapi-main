@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plan_prices",
+  "info": {
+    "name": "Planes Precios",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "company",
+        "supplier"
+      ],
+      "required": true
+    },
+    "stripe_price_ID": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "one_time",
+        "recurring",
+        "free"
+      ],
+      "required": true,
+      "default": "recurring"
+    },
+    "interval": {
+      "type": "enumeration",
+      "enum": [
+        "year",
+        "month",
+        "week",
+        "day"
+      ]
+    },
+    "interval_count": {
+      "type": "integer"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "plan": {
+      "via": "prices",
+      "model": "plans"
+    }
+  }
+}

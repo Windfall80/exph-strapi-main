@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_menu_links",
+  "info": {
+    "name": "link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "category": {
+      "model": "category"
+    }
+  }
+}

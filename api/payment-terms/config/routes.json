@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payment-terms",
+      "handler": "payment-terms.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-terms/count",
+      "handler": "payment-terms.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-terms/:id",
+      "handler": "payment-terms.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment-terms",
+      "handler": "payment-terms.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment-terms/:id",
+      "handler": "payment-terms.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/payment-terms/:id",
+      "handler": "payment-terms.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quotation-offers",
+      "handler": "quotation-offer.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotation-offers/count",
+      "handler": "quotation-offer.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotation-offers/:id",
+      "handler": "quotation-offer.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotation-offers",
+      "handler": "quotation-offer.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotation-offers/:id",
+      "handler": "quotation-offer.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quotation-offers/:id",
+      "handler": "quotation-offer.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}

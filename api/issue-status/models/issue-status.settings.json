@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issue_statuses",
+  "info": {
+    "name": "Incidencia Estatus",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "class": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "rejected",
+        "completed"
+      ]
+    }
+  }
+}

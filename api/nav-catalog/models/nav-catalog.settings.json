@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "nav_catalogs",
+  "info": {
+    "name": "nav-catalog",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "body": {
+      "type": "dynamiczone",
+      "components": [
+        "menu.link",
+        "menu.dropdown"
+      ]
+    }
+  }
+}

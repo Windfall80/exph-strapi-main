@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offers",
+  "info": {
+    "name": "Ofertas Relámpago",
+    "displayName": "Ofertas Relámpago",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "supplier": {
+      "via": "offers",
+      "model": "supplier"
+    },
+    "requested": {
+      "type": "boolean",
+      "default": false
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "expires_at": {
+      "type": "datetime"
+    },
+    "main_category": {
+      "model": "category"
+    },
+    "categories": {
+      "collection": "category"
+    },
+    "requests": {
+      "private": true,
+      "via": "offer",
+      "collection": "offer-request"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "favs": {
+      "private": true,
+      "via": "fav_offers",
+      "plugin": "users-permissions",
+      "collection": "user"
+    }
+  }
+}

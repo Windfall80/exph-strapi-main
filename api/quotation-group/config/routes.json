@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quotation-groups",
+      "handler": "quotation-group.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotation-groups/count",
+      "handler": "quotation-group.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotation-groups/:id",
+      "handler": "quotation-group.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotation-groups",
+      "handler": "quotation-group.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotation-groups/:id",
+      "handler": "quotation-group.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quotation-groups/:id",
+      "handler": "quotation-group.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotation-groups/share/:id",
+      "handler": "quotation-group.share",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotation-groups/close/:id",
+      "handler": "quotation-group.close",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}

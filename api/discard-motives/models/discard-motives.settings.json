@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discard_motives",
+  "info": {
+    "name": "Motivos Descarte",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

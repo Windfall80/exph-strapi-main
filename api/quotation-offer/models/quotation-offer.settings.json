@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotation_offers",
+  "info": {
+    "name": "Cotizacion Oferta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "quotation": {
+      "via": "offer",
+      "model": "quotation"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "accepted_at": {
+      "type": "datetime"
+    },
+    "rejected_at": {
+      "type": "datetime"
+    },
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "deliver_at": {
+      "type": "datetime"
+    },
+    "reject_details": {
+      "type": "text"
+    }
+  }
+}

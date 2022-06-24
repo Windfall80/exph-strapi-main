@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "name": "Chat Message",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "supplier",
+        "company",
+        "admin"
+      ]
+    },
+    "admin": {
+      "plugin": "admin",
+      "model": "user"
+    }
+  }
+}

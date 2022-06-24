@@ -1,0 +1,125 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "company",
+        "supplier"
+      ]
+    },
+    "company": {
+      "via": "users",
+      "model": "company"
+    },
+    "supplier": {
+      "via": "users",
+      "model": "supplier"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "quotation_groups": {
+      "via": "user",
+      "collection": "quotation-group"
+    },
+    "quotations": {
+      "via": "user",
+      "collection": "quotation"
+    },
+    "issues": {
+      "via": "user",
+      "collection": "issue"
+    },
+    "area": {
+      "model": "category"
+    },
+    "offer_requests": {
+      "via": "user",
+      "collection": "offer-request"
+    },
+    "fav_suppliers": {
+      "via": "favs",
+      "private": true,
+      "collection": "supplier",
+      "dominant": true
+    },
+    "fav_services": {
+      "via": "favs",
+      "private": true,
+      "collection": "service",
+      "dominant": true
+    },
+    "fav_offers": {
+      "via": "favs",
+      "private": true,
+      "collection": "offer",
+      "dominant": true
+    }
+  }
+}

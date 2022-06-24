@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configs",
+  "info": {
+    "name": "config",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "required": true
+    },
+    "value": {
+      "type": "json"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/offer-tickets",
+      "handler": "offer-ticket.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/offer-tickets/count",
+      "handler": "offer-ticket.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/offer-tickets/:id",
+      "handler": "offer-ticket.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/offer-tickets",
+      "handler": "offer-ticket.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/offer-tickets/exchange",
+      "handler": "offer-ticket.exchange",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/offer-tickets/purchase",
+      "handler": "offer-ticket.purchase",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/offer-tickets/:id",
+      "handler": "offer-ticket.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/offer-tickets/:id",
+      "handler": "offer-ticket.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}

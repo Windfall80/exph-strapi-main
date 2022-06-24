@@ -1,0 +1,153 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "name": "Empresas",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "rfc": {
+      "type": "string",
+      "required": true
+    },
+    "representative_name": {
+      "type": "string"
+    },
+    "business_name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "interior_number": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "municipality": {
+      "type": "string"
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "profile_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "representative_id": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "type": {
+      "model": "company-type"
+    },
+    "plan": {
+      "model": "plans"
+    },
+    "price": {
+      "model": "plan-price"
+    },
+    "users": {
+      "via": "company",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "quotation_groups": {
+      "via": "company",
+      "collection": "quotation-group"
+    },
+    "quotations": {
+      "via": "company",
+      "collection": "quotation"
+    },
+    "issues": {
+      "via": "company",
+      "collection": "issue"
+    },
+    "offer_requests": {
+      "via": "company",
+      "collection": "offer-request"
+    },
+    "Stripe_ID": {
+      "type": "string",
+      "unique": true
+    },
+    "Subscription_ID": {
+      "type": "string",
+      "unique": true
+    },
+    "current_period_start": {
+      "type": "datetime"
+    },
+    "current_period_end": {
+      "type": "datetime"
+    },
+    "subscription_status": {
+      "type": "enumeration",
+      "enum": [
+        "incomplete",
+        "incomplete_expired",
+        "trialing",
+        "active",
+        "past_due",
+        "canceled",
+        "unpaid"
+      ],
+      "default": "incomplete"
+    },
+    "invoice_status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "open",
+        "paid",
+        "uncollectible",
+        "void"
+      ],
+      "default": "draft"
+    },
+    "auto_renew": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

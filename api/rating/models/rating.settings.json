@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "name": "Calificaciones",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rating": {
+      "type": "decimal"
+    },
+    "supplier": {
+      "via": "ratings",
+      "model": "supplier"
+    },
+    "rated_by": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "quotation": {
+      "via": "rating",
+      "model": "quotation"
+    },
+    "motives": {
+      "collection": "rating-motive"
+    },
+    "rating_details": {
+      "type": "text"
+    },
+    "request": {
+      "via": "rating",
+      "model": "offer-request"
+    },
+    "service": {
+      "model": "service"
+    },
+    "offer": {
+      "model": "offer"
+    }
+  }
+}

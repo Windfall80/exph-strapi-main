@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/rating-motives",
+      "handler": "rating-motive.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rating-motives/count",
+      "handler": "rating-motive.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/rating-motives/:id",
+      "handler": "rating-motive.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/rating-motives",
+      "handler": "rating-motive.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/rating-motives/:id",
+      "handler": "rating-motive.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/rating-motives/:id",
+      "handler": "rating-motive.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

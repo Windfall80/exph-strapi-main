@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/plan-prices",
+      "handler": "plan-price.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plan-prices/count",
+      "handler": "plan-price.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/plan-prices/:id",
+      "handler": "plan-price.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/plan-prices",
+      "handler": "plan-price.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/plan-prices/:id",
+      "handler": "plan-price.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/plan-prices/:id",
+      "handler": "plan-price.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sockets",
+  "info": {
+    "name": "Socket",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "token": {
+      "type": "uid",
+      "maxLength": 20,
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "admin": {
+      "plugin": "admin",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offer_requests",
+  "info": {
+    "name": "Oferta Solicitud",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "details": {
+      "type": "text"
+    },
+    "check": {
+      "type": "boolean"
+    },
+    "user": {
+      "via": "offer_requests",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "company": {
+      "via": "offer_requests",
+      "model": "company"
+    },
+    "supplier": {
+      "via": "offer_requests",
+      "model": "supplier"
+    },
+    "offer": {
+      "via": "requests",
+      "model": "offer"
+    },
+    "status": {
+      "model": "quotation-status"
+    },
+    "rating": {
+      "via": "request",
+      "model": "rating"
+    },
+    "discarded_at": {
+      "type": "datetime"
+    },
+    "discard_motives": {
+      "collection": "discard-motives"
+    },
+    "discard_details": {
+      "type": "text"
+    },
+    "accepted_at": {
+      "type": "datetime"
+    },
+    "chat_room": {
+      "via": "offer_request",
+      "model": "chat-room"
+    }
+  }
+}

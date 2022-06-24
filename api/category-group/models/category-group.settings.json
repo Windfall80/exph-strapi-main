@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_groups",
+  "info": {
+    "name": "Categoria Grupos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.link"
+    }
+  }
+}

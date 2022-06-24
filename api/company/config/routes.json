@@ -1,0 +1,117 @@
+{
+  "routes": [
+
+    {
+      "method": "GET",
+      "path": "/companies",
+      "handler": "company.find",
+      "config": {
+        "policies": ["global::is-authenticated"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/subscription_date",
+      "handler": "company.subscription_date",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/count",
+      "handler": "company.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/profile",
+      "handler": "company.profile",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/cards",
+      "handler": "company.getCards",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/export-quotations-report",
+      "handler": "company.exportQuotationsReport",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/companies/:id",
+      "handler": "company.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/companies",
+      "handler": "company.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/companies/update-subscription",
+      "handler": "company.updateSubscription",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/companies/cancel-subscription",
+      "handler": "company.cancelSubscription",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/companies/addCard",
+      "handler": "company.addCard",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/companies/:id",
+      "handler": "company.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/companies/remove-paymentmethod/:id",
+      "handler": "company.removePaymentMethod",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/companies/:id",
+      "handler": "company.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}

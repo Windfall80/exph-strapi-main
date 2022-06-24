@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotation_groups",
+  "info": {
+    "name": "Cotizacion Grupos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    },
+    "quotations": {
+      "via": "group",
+      "collection": "quotation"
+    },
+    "user": {
+      "via": "quotation_groups",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "company": {
+      "via": "quotation_groups",
+      "model": "company"
+    }
+  }
+}

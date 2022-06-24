@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quotation-statuses",
+      "handler": "quotation-status.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotation-statuses/count",
+      "handler": "quotation-status.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotation-statuses/:id",
+      "handler": "quotation-status.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotation-statuses",
+      "handler": "quotation-status.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotation-statuses/:id",
+      "handler": "quotation-status.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quotation-statuses/:id",
+      "handler": "quotation-status.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

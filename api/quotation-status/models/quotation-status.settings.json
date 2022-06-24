@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quotation_statuses",
+  "info": {
+    "name": "Cotizacion Estatus",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "class": {
+      "type": "enumeration",
+      "enum": [
+        "requested",
+        "pending",
+        "interested",
+        "discarded",
+        "accepted",
+        "rejected",
+        "completed"
+      ],
+      "required": true
+    }
+  }
+}

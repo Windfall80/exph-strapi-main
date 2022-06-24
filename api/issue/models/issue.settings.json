@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issues",
+  "info": {
+    "name": "Incidencias",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "model": "issue-type"
+    },
+    "details": {
+      "type": "text"
+    },
+    "screenshot": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "user": {
+      "via": "issues",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "company": {
+      "via": "issues",
+      "model": "company"
+    },
+    "supplier": {
+      "via": "issues",
+      "model": "supplier"
+    },
+    "status": {
+      "model": "issue-status"
+    },
+    "chat_room": {
+      "via": "issue",
+      "model": "chat-room"
+    }
+  }
+}

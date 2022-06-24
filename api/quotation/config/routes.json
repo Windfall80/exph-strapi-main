@@ -1,0 +1,132 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quotations",
+      "handler": "quotation.find",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotations/count",
+      "handler": "quotation.count",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quotations/:id",
+      "handler": "quotation.findOne",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotations",
+      "handler": "quotation.create",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotations/bulk-create",
+      "handler": "quotation.bulkCreate",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotations/auto-create",
+      "handler": "quotation.autoCreate",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/:id",
+      "handler": "quotation.update",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quotations/:id",
+      "handler": "quotation.delete",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quotations/share/:id",
+      "handler": "quotation.share",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/interest/:id",
+      "handler": "quotation.interest",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/close/:id",
+      "handler": "quotation.close",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/set-delivery/:id",
+      "handler": "quotation.setDelivery",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/set-rating/:id",
+      "handler": "quotation.setRating",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/discard/:id",
+      "handler": "quotation.discard",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/reject/:id",
+      "handler": "quotation.reject",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quotations/set-offer/:id",
+      "handler": "quotation.setOffer",
+      "config": {
+        "policies": ["global::user-integrity"]
+      }
+    }
+  ]
+}
